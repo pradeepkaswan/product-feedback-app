@@ -4,6 +4,7 @@ import FeedbackList from "../components/feedback-list"
 import illustrationEmpty from "../assets/suggestions/illustration-empty.svg"
 import iconHamburger from "../assets/shared/mobile/icon-hamburger.svg"
 import iconPlus from "../assets/shared/icon-plus.svg"
+import { buttonVariants } from "../components/ui/button"
 
 const Home: React.FC = () => {
 	const { data } = useData()
@@ -25,7 +26,7 @@ const Home: React.FC = () => {
 						alt=""
 					/>
 				</div>
-				<div className="flex justify-between items-center bg-product-500 py-2 px-6">
+				<div className="flex justify-between items-center bg-product-700 py-2 px-6">
 					<div className="text-body-3 font-normal text-product-300">
 						<label htmlFor="filter">Sort by :</label>
 						<select
@@ -40,38 +41,27 @@ const Home: React.FC = () => {
 						</select>
 					</div>
 					<Link
-						to="/add-feedback"
-						className="flex items-center gap-0.5 h-10 px-4 rounded-[10px] text-product-300 bg-product-900 text-body-3 font-bold"
+						to="/add"
+						className={buttonVariants({ variant: "default" })}
 					>
 						<img
 							src={iconPlus}
-							className="h-2 w-2"
+							className="h-2 w-2 mr-2"
 							alt=""
 						/>
 						Add Feedback
 					</Link>
 				</div>
 			</header>
-			<div className="mx-6 md:mx-auto px-4 py-8">
-				{/* <Link
-				to="/add-feedback"
-				className="flex items-center gap-0.5 h-10 px-4 rounded-[10px] text-product-300 bg-product-900 text-body-3 font-bold"
-			>
-				<img
-					src={iconPlus}
-					className="h-2 w-2"
-					alt=""
-				/>
-				Add Feedback
-			</Link> */}
+			<div className="mx-6 md:mx-10 lg:mx-auto px-4 py-8">
 				{data.productRequests.length === 0 ? (
-					<div className="flex flex-col items-center justify-center bg-product-100 px-6 py-[76px] gap-[14px] mt-8 rounded-[10px]">
+					<div className="flex flex-col items-center justify-center bg-product-100 px-6 py-[76px] gap-[14px] mt-8 rounded-lg">
 						<img
 							src={illustrationEmpty}
 							className=""
 							alt=""
 						/>
-						<h1 className="text-[18px] leading-[-0.25px] text-product-500 font-bold">
+						<h1 className="text-[18px] leading-[-0.25px] text-product-700 font-bold">
 							There is no feedback yet.
 						</h1>
 						<p className="text-body-3 font-normal text-product-400 text-center">
@@ -80,11 +70,11 @@ const Home: React.FC = () => {
 						</p>
 						<Link
 							to="/add-feedback"
-							className="flex items-center gap-0.5 h-10 px-4 rounded-[10px] text-product-300 bg-product-900 text-body-3 font-bold"
+							className={buttonVariants({ variant: "default" })}
 						>
 							<img
 								src={iconPlus}
-								className="h-2 w-2"
+								className="h-2 w-2 mr-2"
 								alt=""
 							/>
 							Add Feedback
