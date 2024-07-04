@@ -1,5 +1,5 @@
 import { Feedback } from "../types"
-import FeedbackItem from "./feedback-item"
+import FeedbackCard from "./feedback-card"
 
 interface FeedbackListProps {
 	feedbackItems: Feedback[]
@@ -9,7 +9,7 @@ const FeedbackList: React.FC<FeedbackListProps> = ({ feedbackItems }) => {
 	return (
 		<ul className="flex flex-col gap-4">
 			{feedbackItems.map((item) => (
-				<FeedbackItem item={item} />
+				<FeedbackCard item={item} />
 			))}
 		</ul>
 	)

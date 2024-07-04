@@ -17,12 +17,16 @@ export interface Comment {
 	replies?: Reply[]
 }
 
+export type Category = "ui" | "ux" | "enhancement" | "bug" | "feature"
+
+export type Status = "suggestion" | "planned" | "in-progress" | "live"
+
 export interface Feedback {
 	id: number
 	title: string
-	category: "ui" | "ux" | "enhancement" | "bug" | "feature"
+	category: Category
 	upvotes: number
-	status: "suggestion" | "planned" | "in-progress" | "live"
+	status: Status
 	description: string
 	comments?: Comment[]
 }

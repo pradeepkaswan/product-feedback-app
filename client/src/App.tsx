@@ -1,14 +1,15 @@
-import { DataProvider } from "./context/data-context"
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom"
 import AddFeedback from "./pages/add-feedback"
 import EditFeedback from "./pages/edit-feedback"
 import FeedbackDetail from "./pages/feedback-detail"
 import Home from "./pages/home"
 import Roadmap from "./pages/roadmap"
+import { ApolloProvider } from "@apollo/client"
+import client from "./apollo-client"
 
 const App = () => {
 	return (
-		<DataProvider>
+		<ApolloProvider client={client}>
 			<Router>
 				<Routes>
 					<Route
@@ -20,11 +21,11 @@ const App = () => {
 						element={<FeedbackDetail />}
 					/>
 					<Route
-						path="/add"
+						path="/create-feedback"
 						element={<AddFeedback />}
 					/>
 					<Route
-						path="/edit/:id"
+						path="/edit-feedback/:id"
 						element={<EditFeedback />}
 					/>
 					<Route
@@ -33,7 +34,7 @@ const App = () => {
 					/>
 				</Routes>
 			</Router>
-		</DataProvider>
+		</ApolloProvider>
 	)
 }
 
