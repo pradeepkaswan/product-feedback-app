@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --color-primary-100: hsl(282, 83%, 52%);
+  --color-primary-200: hsl(230, 76%, 59%);
+  --color-primary-300: hsl(230, 31%, 31%);
+  --color-primary-400: hsl(231, 33%, 34%);
+  --color-primary-400: hsl(224, 20%, 49%);
+  --color-primary-500: hsl(231, 100%, 97%);
+  --color-primary-600: hsl(230, 60%, 98%);
+
+  --color-orange: hsl(14, 83%, 74%);
+  --color-blue: hsl(204, 94%, 68%);
+
+  --text-heading-1: 1.5rem;
+  --text-heading-1--line-height: 2.1875rem;
+  --text-heading-1--letter-spacing: -0.020625rem;
+  --text-heading-1--font-weight: 700;
+  --text-heading-2: 1.25rem;
+  --text-heading-2--line-height: 1.8125rem;
+  --text-heading-2--letter-spacing: -0.015625rem;
+  --text-heading-2--font-weight: 700;
+  --text-heading-3: 1.125rem;
+  --text-heading-3--line-height: 1.625rem;
+  --text-heading-3--letter-spacing: -0.015625rem;
+  --text-heading-3--font-weight: 700;
+  --text-heading-4: 0.875rem;
+  --text-heading-4--line-height: 1.25rem;
+  --text-heading-4--letter-spacing: -0.0125rem;
+  --text-heading-4--font-weight: 700;
+  --text-body-1: 1rem;
+  --text-body-1--line-height: 1.4375rem;
+  --text-body-1--font-weight: 400;
+  --text-body-2: 0.9375rem;
+  --text-body-2--line-height: 1.375rem;
+  --text-body-2--font-weight: 400;
+  --text-body-3: 0.8125rem;
+  --text-body-3--line-height: 1.1875rem;
+  --text-body-3--font-weight: 600;
+}
+
+body {
+  @apply bg-[#F2F2F2] antialiased;
+}
+
+@config "../tailwind.config.js";
